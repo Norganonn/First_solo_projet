@@ -1,0 +1,66 @@
+//MIXINS
+
+///
+
+//FONTS//
+@import url(https://fonts.googleapis.com/css?family=Inter:200,300,regular,500,600,700,800);
+///
+
+// RESET
+@import "./reset";
+///
+
+// VARIABLES
+/// e.g. font-size: 2rem;
+
+
+// TEMPLATES
+%brd {
+    border: 1px solid red;
+}
+// e.g. @extend %brd;
+
+// MIXINS 
+@mixin fc($f,$c) {
+    font-size: $f;
+    color: $c;
+}
+// e.g. @include fc(30px,red)
+/*********************************/
+html,
+body {
+	height: 100%;
+	min-width: 320px;
+}
+body {
+	line-height: 1;
+	font-family: 'Inter', sans-serif;
+	color: #BABABA;
+    background-color: #000;
+}
+/*********************************/
+li {
+    list-style: none;
+}
+/*********************************/
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    min-height: 100%;
+}
+/*********************************/
+.page {
+    flex: 1 1 auto;
+}
+/*********************************/
+.container {
+    max-width: 1165px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+/*********************************/
+@import "./header";
+@import "./main";
+@import "./footer";
+
